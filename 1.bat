@@ -1,16 +1,11 @@
-@Echo OFF
-:BegLoop
-SET /P Number=enter number
-if %number% ==- goto ExitLoop
+@echo OFF
 
-IF NOT DEFINED MIN SET MIN=%Number%
-IF NOT DEFINED MAX SET MAX=%Number%
+set /p "namee= Specify the dick:  "
+set /p "nameee= Name of directory: "
+set /p "ext= Extantion of files:  "
 
-IF %Number% LEQ %MIN% SET MIN=%Number%
-IF %Number% GEQ %MAX% SET MAX=%Number%
-GOTO BegLoop
+%namee% 
+cd %nameee% 
+dir *.%ext% /b
 
-:ExitLoop
-ECHO Min = %MIN%
-ECHO Max = %MAX%
-PAUSE
+pause
